@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="banner col-xs-12">
+        <div class="global-header col-xs-12">
+            <h1>Tarjetas</h1>
+        </div>
+    </div>
+    <div class="body col-xs-12" ng-init="elem=true">
+        <div class="components hover col-xs-6 col-md-4" ng-click="elem=false;addform=true" ng-hide="!elem">
+            <div class="e-container">
+                <h2>Ingresar Tarjeta</h2>
+                <p class="description">Te permite añadir un nuevo ingreso recurrente, el cual se calculará de forma automática una vez guardado.</p>
+            </div>
+        </div>
+        <div class="components hover col-xs-6 col-md-4" ng-click="elem=false;editform=true" ng-hide="!elem">
+            <h2>Gestionar Tarjetas</h2>
+            <p class="description">Te permite añadir un nuevo ingreso variable, el cual agregará al cálculo por una única ocasión.</p>
+        </div>
+        <p ng-if="">salal</p>
+        <p ng-if="">edit</p>
+        <div class="return" ng-if="!elem">
+            <p class="hover" ng-click="elem=true">return</p>
+            <p>{{elem}}</p>
+        </div>
+        <div class="add-form" ng-show="">
+
+        </div>
+    </div>
+</div>
