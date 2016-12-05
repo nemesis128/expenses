@@ -6,6 +6,18 @@ var app = angular.module('minionModule', ['ngRoute']);
             templateUrl: "views/globalHeader.html"
         };
     })
+    .directive("incomeList", function() {
+        return {
+            restrict: "E",
+            templateUrl: "views/incomeList.html"
+        };
+    })
+    .directive("ngReturn", function() {
+        return {
+            restrict: "E",
+            templateUrl: "views/return.html"
+        };
+    })
     .config(function($routeProvider) {
         $routeProvider
             .when('/ingresos', {

@@ -1,1 +1,19 @@
-income
+{
+    "fixed": {
+        "spending1":{
+            "name": "Fixed spending 1",
+            "currency": "3",
+            "amount": 1000
+        },
+        "spending2":{
+            "name": "Fixed spending 2",
+            "currency": "2",
+            "amount": 500
+        },
+        "spending3":{
+            "name": "Fixed spending 3",
+            "currency": "1",
+            "amount": 200
+        }
+    }
+}

@@ -3673,3 +3673,17 @@ h2 { margin: 0px; }
 
 /* line 11, scss/_global.scss */
 .hover:hover { cursor: pointer; }
+
+/* line 14, scss/_global.scss */
+ul { margin: 0; padding: 0; }
+/* line 17, scss/_global.scss */
+ul li { list-style: none; }
+
+/* line 23, scss/_global.scss */
+.list-container { margin-bottom: 10px; }
+/* line 25, scss/_global.scss */
+.list-container .elements { border: 1px solid #e5e5e5; }
+/* line 27, scss/_global.scss */
+.list-container .elements li { height: 30px; padding-top: 5px; border: 1px solid #eee; }
+/* line 31, scss/_global.scss */
+.list-container .elements li:hover { cursor: pointer; background: #eee; }

@@ -1,0 +1,7 @@
+<div class="list-container col-xs-12" ng-if="fixedList">
+    <h3>Fixed spendings list</h3>
+    <ul class="elements">
+        <li ng-click="newFixedSpending()">Add a new Fixed spending +</li>
+        <li ng-repeat="(id, spending) in infixedList" data-id="{{id}}" ng-click="fixedSpendingView(id)">{{spending.name}}</li>
+    </ul>
+</div>

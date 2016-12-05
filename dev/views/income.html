@@ -3,15 +3,19 @@
         <div class="global-header col-xs-12">
             <h1>Ingresos</h1>
         </div>
-        <div class="body col-xs-12">
-            <div class="components col-xs-6 col-md-4">
-                <h2>Ingresos fijos</h2>
-                <p class="description">Te permite añadir un nuevo ingreso recurrente, el cual se calculará de forma automática una vez guardado.</p>
-            </div>
-            <div class="components col-xs-6 col-md-4">
-                <h2>Ingresos variables</h2>
-                <p class="description">Te permite añadir un nuevo ingreso variable, el cual agregará al cálculo por una única ocasión.</p>
-            </div>
+    </div>
+</div>
+<div class="row">
+    <div class="body col-xs-12">
+        <div class="components col-xs-6 col-md-4" ng-click="fixedList=true" ng-hide="variableList">
+            <h2>Ingresos fijos</h2>
+            <p class="description">Te permite añadir un nuevo ingreso recurrente, el cual se calculará de forma automática una vez guardado.</p>
+        </div>
+        <div class="components col-xs-6 col-md-4" ng-click="variableList=true" ng-hide="fixedList">
+            <h2>Ingresos variables</h2>
+            <p class="description">Te permite añadir un nuevo ingreso variable, el cual agregará al cálculo por una única ocasión.</p>
         </div>
     </div>
+    <income-list class="col-xs-12"></income-list>
+    <ng-return ng-show="variableList || fixedList"></ng-return>
 </div>
