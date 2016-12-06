@@ -1,7 +1,29 @@
 <div class="list-container col-xs-12" ng-if="fixedList">
-    <h3>Fixed spendings list</h3>
+    <h3>Fixed Income list</h3>
     <ul class="elements">
-        <li ng-click="newFixedSpending()">Add a new Fixed spending +</li>
-        <li ng-repeat="(id, spending) in infixedList" data-id="{{id}}" ng-click="fixedSpendingView(id)">{{spending.name}}</li>
+        <li ng-click="newFixedSpending()">Add a new Fixed Income +</li>
+        <li ng-repeat="(id, spending) in infixedList" data-id="{{id}}" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="fixedIncomeView(id);current(id)">{{spending.name}}</li>
     </ul>
+    <div class="modal fade bs-example-modal-lg" role="dialog" tabindex="-1" aria-labelledby="myLargeModalLabel" style="display: none;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{currentItem.name}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" id="{{currentItem.elementId}}" value="{{currentItem.name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Currency</label>
+                        <input class="form-control" value="{{currentItem.currency}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

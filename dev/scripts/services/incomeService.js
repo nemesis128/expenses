@@ -1,4 +1,5 @@
 app.factory("incomeFactory", function($http){
+    delete list;
     var d = "",
         factory = {},
         list = [];
@@ -7,9 +8,11 @@ app.factory("incomeFactory", function($http){
             method: 'POST',
             url: '/data/income.json'
         }).then(function successCallback(response) {
-            d = response.data.fixed;
-            for(var x in d){
-                list.push(d[x]);
+            d = response.data.fixedIncome;
+            if(list.length == 0){
+                for(var x in d){
+                    list.push(d[x]);
+                }
             }
             return list;
         }, function errorCallback(response) {
@@ -17,21 +20,6 @@ app.factory("incomeFactory", function($http){
             return d
         });
         return list;
-    }
-    factory.service = function(){
-        $http({
-            method: 'POST',
-            url: '/data/income.json'
-        }).then(function successCallback(response) {
-            d = response.data.fixed;
-            for(var x in d){
-                list.push(d[x]);
-            }
-            return list;
-        }, function errorCallback(response) {
-            d = response;
-            return d
-        });
     }
     return factory;
 });
