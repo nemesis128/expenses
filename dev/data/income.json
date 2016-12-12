@@ -3,18 +3,18 @@
         "elementId": 1,
         "name": "Fixed Income 1",
         "currency": "3",
-        "amount": 1000
+        "amount": "1000"
     },
     {
         "elementId": 2,
         "name": "Fixed Income 2",
         "currency": "2",
-        "amount": 500
+        "amount": "500"
     },
     {
         "elementId": 3,
         "name": "Fixed Income 3",
         "currency": "1",
-        "amount": 200
+        "amount": "200"
     }]
 }

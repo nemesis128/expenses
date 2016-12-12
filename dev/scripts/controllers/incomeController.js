@@ -5,14 +5,14 @@ app.controller("incomeController", function($scope, incomeFactory, $location){
         location.reload();
     };
     $scope.fixedIncomeView = function(id){
-        console.log(angular.element(event.target).data('id'));
+        //console.log(angular.element(event.target).data('id'));
     };
     $scope.current = function(id){
         for(var x in $scope.infixedList){
             if(x == id){
                 $scope.currentItem = $scope.infixedList[id];
-                console.log($scope.currentItem);
+                //console.log($scope.currentItem);
             }
         }
-    }
+    };
 });

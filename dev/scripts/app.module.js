@@ -9,7 +9,8 @@ var app = angular.module('minionModule', ['ngRoute']);
     .directive("incomeList", function() {
         return {
             restrict: "E",
-            templateUrl: "views/incomeList.html"
+            templateUrl: "views/incomeList.html",
+            controller: 'formsController'
         };
     })
     .directive("ngReturn", function() {

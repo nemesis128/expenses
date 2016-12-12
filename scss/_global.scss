@@ -1,0 +1,45 @@
+.navbar { 
+
+	margin-bottom: 0px; 
+}
+h2 { 
+
+	margin: 0px; 
+}
+.divider { 
+
+	width: 100%; 
+	height: 10px; 
+}
+.hover:hover { 
+
+	cursor: pointer; 
+}
+ul { 
+	margin: 0; 
+	padding: 0; 
+	li {
+		list-style: none; 
+	}
+}
+.list-container { 
+	margin-bottom: 10px; 
+}
+.list-container .elements { 
+	border: 1px solid #e5e5e5; 
+}
+.list-container .elements li { 
+	height: 30px; 
+	padding-top: 5px; 
+	border: 1px solid #eee; 
+}
+.list-container .elements li:hover { 
+	cursor: pointer; 
+	background: #eee; 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
